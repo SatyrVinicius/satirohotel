@@ -1,0 +1,13 @@
+{
+    "nome_modelo": "Padrao Satiro",
+    "nome_sistema_cabecalho": "Sátiro Hotel",
+    "cor_primaria": "#1c7ed6",
+    "cor_fundo_cabecalho": "#c81414",
+    "cor_subtitulo": "#343a40",
+    "fonte_base": "Verdana, Geneva, sans-serif",
+    "tamanho_base": 13,
+    "mostrar_logo_cabecalho": "Sim",
+    "logo_cabecalho_arquivo": "",
+    "mostrar_botao_imprimir": "Nao",
+    "mostrar_marca_dagua": "Padrao"
+}

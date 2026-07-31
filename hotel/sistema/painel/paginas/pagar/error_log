@@ -1,0 +1,1 @@
+[07-Nov-2023 16:00:40 America/Sao_Paulo] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/paginas/pagar/listar.php on line 118

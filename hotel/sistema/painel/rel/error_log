@@ -1,0 +1,135 @@
+[07-Nov-2023 14:50:31 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php on line 6
+[07-Nov-2023 14:50:31 America/Sao_Paulo] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php on line 57
+[07-Nov-2023 14:50:31 America/Sao_Paulo] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php on line 58
+[07-Nov-2023 14:50:32 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 14:50:32 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 14:50:32 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 14:50:32 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 14:50:32 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 14:50:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:00:54 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php on line 6
+[07-Nov-2023 15:00:55 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:00:55 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:00:55 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:00:55 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:00:55 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:00:55 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:01:21 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php on line 6
+[07-Nov-2023 15:01:21 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:01:21 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:01:21 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:01:21 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:01:21 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:01:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Warning:  require_once(data_formatada.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php on line 4
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required 'data_formatada.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva.php on line 4
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:04:10 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:04:24 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:04:24 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:04:24 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:04:24 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:04:24 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:04:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:05:12 America/Sao_Paulo] PHP Warning:  Attempt to read property "status" on null in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php on line 19
+[07-Nov-2023 15:25:44 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:25:44 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:25:44 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:25:44 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:25:44 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:25:44 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:29:08 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:29:08 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:29:08 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:29:08 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:29:08 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:29:08 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:33:30 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:33:30 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:33:30 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 15:33:30 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:33:30 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:33:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 15:34:55 America/Sao_Paulo] PHP Warning:  Attempt to read property "status" on null in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php on line 19
+[07-Nov-2023 15:55:14 America/Sao_Paulo] PHP Warning:  Attempt to read property "status" on null in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php on line 19
+[07-Nov-2023 15:56:53 America/Sao_Paulo] PHP Warning:  Attempt to read property "status" on null in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php on line 19
+[07-Nov-2023 15:56:57 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/consumo.php on line 6
+[07-Nov-2023 15:58:51 America/Sao_Paulo] PHP Warning:  Attempt to read property "status" on null in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php on line 19
+[07-Nov-2023 15:59:00 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/quartos.php on line 6
+[07-Nov-2023 16:05:45 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/financeiro.php on line 6
+[07-Nov-2023 16:06:42 America/Sao_Paulo] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/financeiro.php on line 203
+[07-Nov-2023 16:06:42 America/Sao_Paulo] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/financeiro.php on line 203
+[07-Nov-2023 16:06:42 America/Sao_Paulo] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/financeiro.php on line 203
+[07-Nov-2023 16:06:42 America/Sao_Paulo] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/financeiro.php on line 203
+[07-Nov-2023 16:07:53 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/lucro.php on line 6
+[07-Nov-2023 16:10:20 America/Sao_Paulo] PHP Deprecated:  Function strftime() is deprecated in /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/estoque.php on line 6
+[07-Nov-2023 16:14:15 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 16:14:15 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 16:14:15 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 16:14:15 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 16:14:15 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 16:14:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 16:15:28 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 16:15:28 America/Sao_Paulo] PHP Warning:  include(../conexao.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 16:15:28 America/Sao_Paulo] PHP Warning:  include(): Failed opening '../conexao.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 2
+[07-Nov-2023 16:15:28 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 16:15:28 America/Sao_Paulo] PHP Warning:  require(../painel/api/texto.php): Failed to open stream: No such file or directory in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 16:15:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '../painel/api/texto.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php:57
+Stack trace:
+#0 /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php(22): require_once()
+#1 /home/sistehugo/hotel.sistemashugo.com.br/sistema/painel/rel/reserva_class.php(52): require('/home/sistehugo...')
+#2 {main}
+  thrown in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/aprovar_pgto.php on line 57
+[07-Nov-2023 16:24:52 America/Sao_Paulo] PHP Warning:  Attempt to read property "status" on null in /home/sistehugo/hotel.sistemashugo.com.br/sistema/pagamentos/consultar_pagamento.php on line 19
