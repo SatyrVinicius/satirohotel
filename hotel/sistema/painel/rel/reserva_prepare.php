@@ -46,7 +46,7 @@ function gerar_reserva_pdf_cache($id){
 
 	$resultadoGeracao = gerar_pdf_por_html($html, $cacheFile, 'portrait');
 	if(!$resultadoGeracao['ok']){
-		return ['status' => 'error', 'message' => 'Falha ao gerar PDF', 'debug' => $resultadoGeracao];
+		return ['status' => 'error', 'message' => 'Falha ao gerar PDF', 'debug' => $resultadoGeracao, 'html_length' => strlen($html)];
 	}
 
 	return ['status' => 'ok', 'cacheName' => $cacheName, 'cacheFile' => $cacheFile];
