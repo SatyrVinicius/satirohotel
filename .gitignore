@@ -1,0 +1,20 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+**/error_log
+
+# PDFs gerados em runtime
+hotel/sistema/painel/pdf/
+
+# Uploads operacionais (não versionar)
+hotel/sistema/painel/images/arquivos/
+hotel/sistema/painel/images/contas/
+hotel/sistema/painel/images/marketing/
+hotel/sistema/painel/images/perfil/
+
+# Cache/local
+*.tmp
+*.temp
