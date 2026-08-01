@@ -1,6 +1,6 @@
 <?php
-if(!isset($pdo)) require_once("../../conexao.php");
-require_once("data_formatada.php");
+if(!isset($pdo)) require_once(__DIR__ . '/../../conexao.php');
+require_once(__DIR__ . '/data_formatada.php');
 require_once(__DIR__ . '/modelo_html_helper.php');
 
 if(!isset($token_rel)) $token_rel = @$_GET['token_rel'];

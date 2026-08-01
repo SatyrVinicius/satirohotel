@@ -9,28 +9,6 @@ if($id <= 0){
 	exit();
 }
 
-$token_rel = 'FKLUY7852';
-$logoAbs = realpath(__DIR__ . '/../img/logo.jpg');
-if($logoAbs){
-	$logo_relatorio = 'file:///' . str_replace('\\', '/', $logoAbs);
-}
+$urlRelatorio = 'rel/reserva.php?token_rel=FKLUY7852&id=' . $id;
 
-ob_start();
-include(__DIR__ . '/reserva.php');
-$html = ob_get_clean();
-
-if(trim($html) == '' || stripos($html, 'Reserva não encontrada!') !== false){
-	echo json_encode(['status' => 'error', 'message' => 'Reserva não encontrada']);
-	exit();
-}
-
-$cacheDir = __DIR__ . '/../pdf/reservas';
-if(!is_dir($cacheDir)){
-	@mkdir($cacheDir, 0777, true);
-}
-
-$cacheName = 'reserva_' . $id . '.html';
-$cacheFile = $cacheDir . '/' . $cacheName;
-file_put_contents($cacheFile, $html);
-
-echo json_encode(['status' => 'ok', 'cached' => false, 'url' => 'pdf/reservas/' . $cacheName . '?v=' . @filemtime($cacheFile)]);
+echo json_encode(['status' => 'ok', 'url' => $urlRelatorio]);

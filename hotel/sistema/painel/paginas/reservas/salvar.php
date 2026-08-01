@@ -177,16 +177,6 @@ $stmt->bindValue(":id", $ultimo_id);
 
 $stmt->execute();
 
-require_once("../../rel/gerar_reserva_pdf.php");
-
-$arquivoPdf = __DIR__ . '/../../pdf/reservas/reserva_' . (int)$ultimo_id . '.pdf';
-$gerou = false;
-if (file_exists($arquivoPdf)) {
-    @unlink($arquivoPdf);
-}
-
-$gerou = gerar_pdf_reserva($ultimo_id, $pdo);
-
 echo 'Salvo com Sucesso-'.$ultimo_id;
 
 

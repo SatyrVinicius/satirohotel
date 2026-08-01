@@ -1456,16 +1456,15 @@ if(@$reservas == 'ocultar'){
 			</div>
 
 			<div class="modal-body">
-				<p style="margin-bottom: 20px">Deseja baixar o PDF da reserva ou apenas visualizar?</p>
+					<p style="margin-bottom: 20px">Deseja abrir a reserva em uma nova aba para visualizar ou imprimir?</p>
 
-				<div class="row">
-					<div class="col-md-6" style="margin-bottom: 10px">
-						<a id="link_baixar_reserva" class="btn btn-primary btn-block" href="#" onclick="abrirPdfAssincrono('rel/reserva_prepare.php', {id: $('#id_reserva_pdf').val()}, 'Gerando reserva em PDF...'); return false;">Baixar Reserva em PDF</a>
-					</div>
+					<div class="row">
+						<div class="col-md-6" style="margin-bottom: 10px">
+							<a id="link_baixar_reserva" class="btn btn-primary btn-block" href="#" onclick="abrirReservaHtml($('#id_reserva_pdf').val(), true); return false;">Abrir Reserva</a>
+						</div>
 
-					<div class="col-md-6" style="margin-bottom: 10px">
-						<a id="link_ver_reserva" class="btn btn-success btn-block" href="#" onclick="abrirPdfAssincrono('rel/reserva_prepare.php', {id: $('#id_reserva_pdf').val()}, 'Gerando reserva em PDF...'); return false;">Ver Reserva</a>
-					</div>
+						<div class="col-md-6" style="margin-bottom: 10px">
+							<a id="link_ver_reserva" class="btn btn-success btn-block" href="#" onclick="abrirReservaHtml($('#id_reserva_pdf').val(), false); return false;">Visualizar no Navegador</a>
 				</div>
 				<input type="hidden" id="id_reserva_pdf" value="">
 			</div>
@@ -1804,13 +1803,12 @@ if(@$reservas == 'ocultar'){
 
 
 
-				//mostrar opções de PDF da reserva
+				//mostrar opções de visualização da reserva
 
 				var id = msg[1].trim();
-				var urlPdfPronto = "pdf/reservas/reserva_" + id + ".pdf?v=" + new Date().getTime();
 				$('#id_reserva_pdf').val(id);
-				$('#link_baixar_reserva').attr('href', urlPdfPronto);
-				$('#link_ver_reserva').attr('href', urlPdfPronto);
+				$('#link_baixar_reserva').attr('href', '#');
+				$('#link_ver_reserva').attr('href', '#');
 				$('#modalReservaPdf').modal('show');
 
 
@@ -1852,6 +1850,19 @@ if(@$reservas == 'ocultar'){
 
 
 	});
+
+	window.abrirReservaHtml = function(id, imprimir){
+		if(!id){
+			return false;
+		}
+		var url = 'rel/reserva.php?token_rel=FKLUY7852&id=' + encodeURIComponent(id);
+		if(imprimir){
+			url += '&imprimir=1';
+		}
+		window.open(url, '_blank');
+		$('#modalReservaPdf').modal('hide');
+		return false;
+	};
 
 	$('#link_baixar_reserva, #link_ver_reserva').on('click', function(){
 		$('#modalReservaPdf').modal('hide');
