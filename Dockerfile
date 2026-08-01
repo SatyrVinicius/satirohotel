@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN a2enmod rewrite
 
-COPY . /var/www/html/
+COPY hotel/ /var/www/html/
 WORKDIR /var/www/html/
 
 EXPOSE 80
