@@ -84,7 +84,6 @@ if(php_sapi_name() === 'cli'){
 
 $argString = http_build_query(['id' => $id]);
 $script = __FILE__;
-iniciar_processo_em_segundo_plano($script, $argString);
+	$iniciou = iniciar_processo_em_segundo_plano($script, $argString);
 
-echo json_encode(['status' => 'processing']);
-exit();
+	echo json_encode(['status' => $iniciou ? 'processing' : 'error', 'message' => $iniciou ? 'Processo iniciado' : 'Não foi possível iniciar o processo de geração']);
