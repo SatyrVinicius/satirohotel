@@ -1869,15 +1869,17 @@ $("#form_galeria").submit(function () {
 					$('#btnDownloadPdfGerado').attr('href', resp.url);
 					$('#acoesGerandoRelQuartos').show();
 				} else if(resp && resp.status === 'processing'){
-					if(dados._tentativas < 15){
+					if(dados._tentativas < 8){
 						dados._tentativas++;
 						$('#statusGerandoRelQuartos').text('Gerando em segundo plano...');
 						setTimeout(function(){
 							abrirPdfAssincrono(urlPreparar, dados, label);
-						}, 1200);
+						}, 600);
 					} else {
-						alert('O PDF ainda está sendo gerado. Tente novamente em alguns segundos.');
-						$('#modalGerandoRelQuartos').modal('hide');
+						$('#statusGerandoRelQuartos').text('O PDF ainda está sendo gerado. Tente novamente em alguns segundos.');
+						setTimeout(function(){
+							$('#modalGerandoRelQuartos').modal('hide');
+						}, 1200);
 					}
 				}else{
 					alert('Não foi possível gerar o PDF agora.');
