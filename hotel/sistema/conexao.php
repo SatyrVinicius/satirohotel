@@ -6,10 +6,10 @@ date_default_timezone_set('America/Sao_Paulo');
 $modo_teste = 'Não';
 
 //dados conexão bd VPS
-$servidor = 'localhost';
-$banco = 'hotel_db';
-$usuario = 'hoteluser';
-$senha = 'Jumentor0x1n';
+$servidor = getenv('DB_HOST') ?: 'localhost';
+$banco = getenv('DB_NAME') ?: 'hotel_db';
+$usuario = getenv('DB_USER') ?: 'hoteluser';
+$senha = getenv('DB_PASS') ?: 'Jumentor0x1n';
 
 try {
 	$pdo = new PDO("mysql:host=$servidor;dbname=$banco;charset=utf8mb4", $usuario, $senha, [

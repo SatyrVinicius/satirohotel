@@ -6,6 +6,13 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: satirohotel
+    environment:
+      DB_HOST: host.docker.internal
+      DB_NAME: hotel_db
+      DB_USER: hoteluser
+      DB_PASS: Jumentor0x1n
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "80:80"
     restart: unless-stopped
