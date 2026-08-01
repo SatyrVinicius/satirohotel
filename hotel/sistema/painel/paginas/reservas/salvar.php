@@ -178,16 +178,14 @@ $stmt->bindValue(":id", $ultimo_id);
 $stmt->execute();
 
 require_once("../../rel/gerar_reserva_pdf.php");
-$phpBin = PHP_BINARY;
-if (DIRECTORY_SEPARATOR === '\\') {
-    $cmd = 'start "" /B ' . escapeshellarg($phpBin) . ' ' . escapeshellarg(__DIR__ . '/../../rel/reserva_prepare.php') . ' id=' . (int)$ultimo_id . ' >nul 2>&1';
-    @pclose(@popen($cmd, 'r'));
-} else {
-    $cmd = 'nohup ' . escapeshellarg($phpBin) . ' ' . escapeshellarg(__DIR__ . '/../../rel/reserva_prepare.php') . ' id=' . (int)$ultimo_id . ' > /dev/null 2>&1 &';
-    @exec($cmd);
+
+$arquivoPdf = __DIR__ . '/../../pdf/reservas/reserva_' . (int)$ultimo_id . '.pdf';
+$gerou = false;
+if (file_exists($arquivoPdf)) {
+    @unlink($arquivoPdf);
 }
 
-
+$gerou = gerar_pdf_reserva($ultimo_id, $pdo);
 
 echo 'Salvo com Sucesso-'.$ultimo_id;
 
