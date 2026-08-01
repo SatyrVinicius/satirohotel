@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../conexao.php");
+require_once(__DIR__ . '/../../conexao.php');
 require_once(__DIR__ . '/pdf_engine.php');
 header('Content-Type: application/json; charset=utf-8');
 
@@ -8,8 +8,22 @@ if (php_sapi_name() === 'cli') {
 	parse_str(implode('&', array_slice($argv, 1)), $_POST);
 }
 
+function iniciar_processo_em_segundo_plano($scriptPath, $argString){
+	$phpBin = PHP_BINARY;
+
+	if (DIRECTORY_SEPARATOR === '\\') {
+		$cmd = 'start "" /B ' . escapeshellarg($phpBin) . ' ' . escapeshellarg($scriptPath) . ' ' . escapeshellarg($argString);
+		@pclose(@popen($cmd, 'r'));
+		return true;
+	}
+
+	$cmd = 'nohup ' . escapeshellarg($phpBin) . ' ' . escapeshellarg($scriptPath) . ' ' . escapeshellarg($argString) . ' > /dev/null 2>&1 &';
+	@exec($cmd);
+	return true;
+}
+
 function gerar_reserva_pdf_cache($id){
-	$cacheDir = "../pdf/reservas";
+	$cacheDir = __DIR__ . '/../pdf/reservas';
 	if(!is_dir($cacheDir)){
 		@mkdir($cacheDir, 0777, true);
 	}
@@ -23,7 +37,7 @@ function gerar_reserva_pdf_cache($id){
 		$logo_relatorio = 'file:///' . str_replace('\\', '/', $logoAbs);
 	}
 	ob_start();
-	include("reserva.php");
+	include(__DIR__ . '/reserva.php');
 	$html = ob_get_clean();
 
 	if(trim($html) == '' || stripos($html, 'Reserva não encontrada!') !== false){
@@ -44,7 +58,7 @@ if($id <= 0){
 	exit();
 }
 
-$cacheDir = "../pdf/reservas";
+$cacheDir = __DIR__ . '/../pdf/reservas';
 if(!is_dir($cacheDir)){
 	@mkdir($cacheDir, 0777, true);
 }
@@ -69,9 +83,8 @@ if(php_sapi_name() === 'cli'){
 }
 
 $argString = http_build_query(['id' => $id]);
-$phpBin = PHP_BINARY;
 $script = __FILE__;
-@pclose(@popen('start "" /B ' . escapeshellarg($phpBin) . ' ' . escapeshellarg($script) . ' ' . $argString, 'r'));
+iniciar_processo_em_segundo_plano($script, $argString);
 
 echo json_encode(['status' => 'processing']);
 exit();
