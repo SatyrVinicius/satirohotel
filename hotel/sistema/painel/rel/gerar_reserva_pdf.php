@@ -21,6 +21,10 @@ function gerar_pdf_reserva($id, $pdo)
     if (!is_dir($dir)) {
         @mkdir($dir, 0777, true);
     }
+    if (!is_dir($dir)) {
+        return false;
+    }
+    @chmod($dir, 0777);
 
     $arquivo = $dir . '/reserva_' . $id . '.pdf';
 
