@@ -27,10 +27,11 @@ $mostrar_botao_imprimir_modelo = ($modelo_html['mostrar_botao_imprimir'] == 'Sim
 $mostrar_logo_cabecalho_modelo = ($modelo_html['mostrar_logo_cabecalho'] == 'Sim');
 $nome_sistema_cabecalho_modelo = trim($modelo_html['nome_sistema_cabecalho']) != '' ? $modelo_html['nome_sistema_cabecalho'] : $nome_sistema;
 
-$logo_relatorio = $url_sistema . 'img/logo.jpg';
+$logoArquivo = 'logo.jpg';
 if (!empty($modelo_html['logo_cabecalho_arquivo'])) {
-    $logo_relatorio = '../img/' . $modelo_html['logo_cabecalho_arquivo'];
+    $logoArquivo = $modelo_html['logo_cabecalho_arquivo'];
 }
+$logo_relatorio = $url_sistema . 'img/' . rawurlencode($logoArquivo);
 
 $exibir_marca_dagua_modelo = ($marca_dagua == 'Sim');
 if($modelo_html['mostrar_marca_dagua'] == 'Sim'){
