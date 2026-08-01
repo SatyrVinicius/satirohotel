@@ -1,20 +1,29 @@
 <?php 
+if(!isset($pdo)) require_once(__DIR__ . '/../../conexao.php');
+if(!isset($token_rel)) $token_rel = @$_GET['token_rel'];
+if (!isset($token_rel)) $token_rel = @$_POST['token_rel'];
 if ($token_rel != 'FKLUY7852') {
   echo '<script>window.location="../../"</script>';
   exit();
 }
 
-include('data_formatada.php');
+require_once(__DIR__ . '/data_formatada.php');
 
 // datas de entrada (YYYY-mm-dd)
-$dataInicial = $dataInicial ?? $_POST['dataInicial'] ?? date('Y-m-d');
-$dataFinal   = $dataFinal   ?? $_POST['dataFinal']   ?? date('Y-m-d');
+$dataInicial = $dataInicial ?? @$_GET['dataInicial'] ?? @$_POST['dataInicial'] ?? date('Y-m-d');
+$dataFinal   = $dataFinal   ?? @$_GET['dataFinal']   ?? @$_POST['dataFinal']   ?? date('Y-m-d');
 
 // formatações
 $dataInicialF = implode('/', array_reverse(explode('-', $dataInicial)));
 $dataFinalF   = implode('/', array_reverse(explode('-', $dataFinal)));
 $datas = ($dataInicial == $dataFinal) ? $dataInicialF : ($dataInicialF.' À '.$dataFinalF);
 $texto_filtro = "PERÍODO DA APURAÇÃO : ".$datas;
+if (!isset($data_hoje) || $data_hoje === '') {
+  $data_hoje = date('d/m/Y');
+}
+if (!isset($marca_dagua)) {
+  $marca_dagua = 'Sim';
+}
 
 // nº de diárias (checkout exclusivo), mínimo 1
 $diffDias = (int) floor((strtotime($dataFinal) - strtotime($dataInicial)) / 86400);

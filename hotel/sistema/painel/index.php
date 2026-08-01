@@ -1662,7 +1662,7 @@ if($linhas > 0){
     	clearInterval(timerRelQuartos);
     	timerRelQuartos = setInterval(function(){
     		var segundos = Math.floor((Date.now() - inicioRelQuartos) / 1000);
-    		$("#statusGerandoRelQuartos").text('Gerando PDF... ' + segundos + 's');
+    		$("#statusGerandoRelQuartos").text('Abrindo relatório... ' + segundos + 's');
     	}, 1000);
 
     	$.ajax({
