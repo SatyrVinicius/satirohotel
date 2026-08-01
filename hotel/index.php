@@ -47,7 +47,7 @@ if($linhas > 0){
                 <div class="container">
                     <div class="hotel_booking_table">
                         <div class="col-md-3">
-                            <h2>Faça<br> Sua Reserva</h2>
+                            <h2>Faça<br> Sua Reserva1</h2>
                         </div>
                         <div class="col-md-9">
                             <div class="boking_table">
