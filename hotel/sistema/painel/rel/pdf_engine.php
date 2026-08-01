@@ -8,22 +8,33 @@ function wkhtmltopdf_caminho_binario(){
         $candidatos[] = $envBin;
     }
 
-    $candidatos[] = 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe';
-    $candidatos[] = 'C:\\Program Files (x86)\\wkhtmltopdf\\bin\\wkhtmltopdf.exe';
-    $candidatos[] = 'wkhtmltopdf';
+    if (DIRECTORY_SEPARATOR === '\\') {
+        $candidatos[] = 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe';
+        $candidatos[] = 'C:\\Program Files (x86)\\wkhtmltopdf\\bin\\wkhtmltopdf.exe';
+        $candidatos[] = 'wkhtmltopdf';
+    } else {
+        $candidatos[] = '/usr/local/bin/wkhtmltopdf';
+        $candidatos[] = '/usr/bin/wkhtmltopdf';
+        $candidatos[] = '/bin/wkhtmltopdf';
+        $candidatos[] = 'wkhtmltopdf';
+    }
 
     foreach ($candidatos as $bin) {
         if ($bin === 'wkhtmltopdf') {
             $out = array();
             $ret = 1;
-            @exec('where wkhtmltopdf 2>NUL', $out, $ret);
+            if (DIRECTORY_SEPARATOR === '\\') {
+                @exec('where wkhtmltopdf 2>NUL', $out, $ret);
+            } else {
+                @exec('which wkhtmltopdf 2>/dev/null', $out, $ret);
+            }
             if ($ret === 0 && !empty($out[0])) {
                 return trim($out[0]);
             }
             continue;
         }
 
-        if (is_file($bin)) {
+        if (is_file($bin) && is_executable($bin)) {
             return $bin;
         }
     }
