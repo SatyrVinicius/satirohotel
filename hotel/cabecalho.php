@@ -41,13 +41,7 @@ if(@$_SESSION['pagina'] == 'contatos'){
 
 
 
-$isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off');
-$scheme = $isHttps ? 'https' : 'http';
-$basePath = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-if($basePath === '/' || $basePath === '.'){
-    $basePath = '';
-}
-$url_sistema_cab = $scheme . '://' . $_SERVER['HTTP_HOST'] . $basePath . '/';
+$url_sistema_cab = getBaseUrl();
 
 ?>
 
@@ -58,6 +52,7 @@ $url_sistema_cab = $scheme . '://' . $_SERVER['HTTP_HOST'] . $basePath . '/';
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <base href="<?php echo $url_sistema_cab ?>">
         <link rel="icon" href="<?php echo $url_sistema_cab ?>sistema/img/icone.png" type="image/x-icon">
         <title><?php echo $nome_sistema ?></title>
         <!-- Bootstrap CSS -->
@@ -83,7 +78,7 @@ $url_sistema_cab = $scheme . '://' . $_SERVER['HTTP_HOST'] . $basePath . '/';
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.php"><img class="logo_mobile" src="<?php echo $url_sistema_cab ?>sistema/img/<?php echo $logo_site ?>" alt="" ></a>
+                    <a class="navbar-brand logo_h" href="<?php echo $url_sistema_cab ?>index.php"><img class="logo_mobile" src="<?php echo $url_sistema_cab ?>sistema/img/<?php echo $logo_site ?>" alt="" ></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>

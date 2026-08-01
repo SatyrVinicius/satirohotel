@@ -20,22 +20,48 @@ try {
 }
 
 
-$isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off');
-$scheme = $isHttps ? 'https' : 'http';
-$scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
+function getBaseUrl($pathPrefix = '') {
+    $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        || (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)
+        || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https');
 
-if($scriptDir === '/' || $scriptDir === '.'){
-	$scriptDir = '';
+    $scheme = $isHttps ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? ($_SERVER['SERVER_NAME'] ?? 'localhost');
+
+    $documentRoot = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] ?? '');
+    $scriptFile = str_replace('\\', '/', $_SERVER['SCRIPT_FILENAME'] ?? '');
+    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '/');
+
+    $basePath = '';
+
+    if (!empty($documentRoot) && !empty($scriptFile) && strpos($scriptFile, $documentRoot) === 0) {
+        $relativePath = substr($scriptFile, strlen($documentRoot));
+        $relativeDir = dirname($relativePath);
+
+        if ($relativeDir !== '/' && $relativeDir !== '.' && $relativeDir !== '\\') {
+            $basePath = str_replace('\\', '/', $relativeDir);
+        }
+    } elseif (!empty($scriptName)) {
+        $scriptDir = dirname($scriptName);
+
+        if ($scriptDir !== '/' && $scriptDir !== '.' && $scriptDir !== '\\') {
+            $basePath = str_replace('\\', '/', $scriptDir);
+        }
+    }
+
+    if ($basePath !== '') {
+        $basePath = '/' . trim($basePath, '/');
+    }
+
+    if ($pathPrefix !== '') {
+        $pathPrefix = '/' . trim($pathPrefix, '/');
+        $basePath .= $pathPrefix;
+    }
+
+    return $scheme . '://' . $host . $basePath . '/';
 }
 
-$posSistema = stripos($scriptDir, '/sistema');
-if($posSistema !== false){
-	$baseRoot = substr($scriptDir, 0, $posSistema);
-}else{
-	$baseRoot = $scriptDir;
-}
-
-$url_sistema = $scheme . '://' . $_SERVER['HTTP_HOST'] . $baseRoot . '/sistema/';
+$url_sistema = getBaseUrl('/sistema');
 
 //variaveis globais
 $nome_sistema = 'Nome Sistema';
