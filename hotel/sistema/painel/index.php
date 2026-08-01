@@ -613,7 +613,7 @@ if($linhas > 0){
             
             <!-- Imagem de Perfil -->
             <span class="prfil-img">
-                <img src="<?php echo $url_sistema ?>painel/images/perfil/<?php echo rawurlencode($foto_usuario) ?>" alt="" width="50px" height="50px">
+                <img src="images/perfil/<?php echo rawurlencode($foto_usuario) ?>" alt="" width="50px" height="50px">
             </span> 
             
             <!-- Nome do Usuário -->
@@ -812,7 +812,7 @@ if($linhas > 0){
 						</div>
 
 						<div class="col-md-4">								
-							<img src="<?php echo $url_sistema ?>painel/images/perfil/<?php echo rawurlencode($foto_usuario) ?>"  width="80px" id="target-usu">								
+							<img src="images/perfil/<?php echo rawurlencode($foto_usuario) ?>"  width="80px" id="target-usu">								
 							
 						</div>
 
