@@ -1882,7 +1882,11 @@ $("#form_galeria").submit(function () {
 						}, 1200);
 					}
 				}else{
-					alert('Não foi possível gerar o PDF agora.');
+					var msg = resp && resp.message ? resp.message : 'Não foi possível gerar o PDF agora.';
+					if(resp && resp.debug && resp.debug.erro){
+						msg += ' (' + resp.debug.erro + ')';
+					}
+					alert(msg);
 					$('#modalGerandoRelQuartos').modal('hide');
 				}
 			},
