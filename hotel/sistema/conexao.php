@@ -5,26 +5,18 @@ date_default_timezone_set('America/Sao_Paulo');
 
 $modo_teste = 'Não';
 
-//dados conexão bd local
+//dados conexão bd VPS
 $servidor = 'localhost';
-$banco = 'hotel';
-$usuario = 'root';
-$senha = '';
-
-
-/*
-//dados conexão bd hospedada
-$servidor = 'sh-pro24.hostgator.com.br';
-$banco = 'hugocu75_hotel';
-$usuario = 'hugocu75_hotel';
-$senha = 'Bancohotel';
-*/
+$banco = 'hotel_db';
+$usuario = 'hoteluser';
+$senha = 'Jumentor0x1n';
 
 try {
-	$pdo = new PDO("mysql:dbname=$banco;host=$servidor;charset=utf8mb4", "$usuario", "$senha");
-} catch (Exception $e) {
-	echo 'Erro ao conectar ao banco de dados!<br>';
-	echo $e;
+	$pdo = new PDO("mysql:host=$servidor;dbname=$banco;charset=utf8mb4", $usuario, $senha, [
+		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+	]);
+} catch (PDOException $e) {
+	die('Erro ao conectar ao banco de dados: ' . $e->getMessage());
 }
 
 
