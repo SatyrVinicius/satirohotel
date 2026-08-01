@@ -28,9 +28,17 @@ function getBaseUrl($pathPrefix = '') {
     $scheme = $isHttps ? 'https' : 'http';
     $host = $_SERVER['HTTP_HOST'] ?? ($_SERVER['SERVER_NAME'] ?? 'localhost');
 
+    $pathPrefix = trim((string)$pathPrefix, '/');
+    $normalizedPrefix = $pathPrefix !== '' ? '/' . $pathPrefix : '';
+    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '/');
+    $scriptName = '/' . trim($scriptName, '/');
+
+    if ($normalizedPrefix !== '' && ($scriptName === $normalizedPrefix || strpos($scriptName, $normalizedPrefix . '/') === 0)) {
+        return $scheme . '://' . $host . $normalizedPrefix . '/';
+    }
+
     $documentRoot = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] ?? '');
     $scriptFile = str_replace('\\', '/', $_SERVER['SCRIPT_FILENAME'] ?? '');
-    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '/');
 
     $basePath = '';
 
@@ -41,7 +49,7 @@ function getBaseUrl($pathPrefix = '') {
         if ($relativeDir !== '/' && $relativeDir !== '.' && $relativeDir !== '\\') {
             $basePath = str_replace('\\', '/', $relativeDir);
         }
-    } elseif (!empty($scriptName)) {
+    } elseif (!empty($scriptName) && $scriptName !== '/') {
         $scriptDir = dirname($scriptName);
 
         if ($scriptDir !== '/' && $scriptDir !== '.' && $scriptDir !== '\\') {
@@ -53,9 +61,14 @@ function getBaseUrl($pathPrefix = '') {
         $basePath = '/' . trim($basePath, '/');
     }
 
-    if ($pathPrefix !== '') {
-        $pathPrefix = '/' . trim($pathPrefix, '/');
-        $basePath .= $pathPrefix;
+    if ($normalizedPrefix !== '') {
+        if ($basePath === '' || $basePath === $normalizedPrefix) {
+            $basePath = $normalizedPrefix;
+        } elseif (strpos($basePath, $normalizedPrefix) === 0) {
+            $basePath = $normalizedPrefix;
+        } else {
+            $basePath = $normalizedPrefix . $basePath;
+        }
     }
 
     return $scheme . '://' . $host . $basePath . '/';
