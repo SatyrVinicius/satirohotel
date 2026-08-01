@@ -185,6 +185,10 @@ $total_finalF = @number_format($total_final, 2, ',', '.');
 <head>
 <!-- INICIO CSS DO RELATORIO -->
 <style>
+body { font-family: <?php echo $fonte_base_modelo ?>; font-size: <?php echo $tamanho_base_modelo ?>px; }
+table { width:100%; border-collapse:collapse !important; table-layout:fixed; border:1px solid #444; }
+th, td { border:1px solid #444 !important; padding:6px; font-size:11px; }
+th { background:#f1f1f1 !important; text-align:left; }
 @media screen {
     body { margin:0; padding:20px; background:#f6f7fb; }
     .screen-report-header { display:block; max-width:1200px; margin:0 auto 18px auto; padding:20px 24px; background:<?php echo $cor_fundo_cabecalho_modelo ?>; border-radius:10px; box-shadow:0 4px 18px rgba(0,0,0,0.06); }
@@ -195,18 +199,15 @@ $total_finalF = @number_format($total_final, 2, ',', '.');
     .screen-print-action { margin-top:12px; }
     .screen-print-action button { background:<?php echo $cor_primaria_modelo ?>; color:#fff; border:0; padding:8px 14px; border-radius:6px; font-size:13px; cursor:pointer; }
     .box { max-width:1200px; margin:0 auto 12px auto; background:#fff; padding:12px 15px; border-radius:8px; box-shadow:0 4px 18px rgba(0,0,0,0.06); }
-    table { width:100%; border-collapse:collapse; table-layout:fixed; }
-    th, td { border:1px solid #ddd; padding:6px; font-size:11px; }
-    th { background:#f1f1f1; text-align:left; }
     .marca { position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); width:45%; opacity:6%; }
 }
 @media print {
     body { margin:0; padding:0; }
     .screen-print-action { display:none; }
     .box, .screen-report-header { box-shadow:none; border-radius:0; }
+    table, th, td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     @page { margin: 12mm 10mm 12mm 10mm; }
 }
-body { font-family: <?php echo $fonte_base_modelo ?>; font-size: <?php echo $tamanho_base_modelo ?>px; }
 </style>
 <!-- FIM CSS DO RELATORIO -->
 </head>
